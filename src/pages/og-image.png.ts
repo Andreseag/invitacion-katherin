@@ -17,7 +17,7 @@ export async function GET() {
   const fontMontserrat = fs.readFileSync(montserratPath);
 
   // 2. Cargar la FOTO
-  const imagePath = path.resolve(process.cwd(), "public/image-1.jpeg");
+  const imagePath = path.resolve(process.cwd(), "public/image-og.jpeg");
   const imageBuffer = fs.readFileSync(imagePath);
   const base64Image = `data:image/jpeg;base64,${imageBuffer.toString("base64")}`;
 
