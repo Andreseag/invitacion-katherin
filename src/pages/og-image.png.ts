@@ -106,7 +106,7 @@ export async function GET() {
                       marginBottom: 30,
                       fontFamily: "Montserrat",
                     },
-                    children: "28 . 02 . 2026",
+                    children: "13 . 06 . 2026",
                   },
                 },
                 {
