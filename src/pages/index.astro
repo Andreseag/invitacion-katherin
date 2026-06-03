@@ -18,10 +18,11 @@ import foto1 from '../assets/image-1.jpeg';
 import foto2 from '../assets/image-2.jpeg';
 import foto3 from '../assets/image-3.jpeg';
 import Footer from '../components/Footer.astro';
+import InvitacionFamilia from '../components/InvitacionFamilia.astro';
 
 const misFotos = [
-  { url: foto1, alt: 'Valery en el jardín' },
-  { url: foto2, alt: 'Primer plano Valery' },
+  { url: foto1, alt: 'Katherin en el jardín' },
+  { url: foto2, alt: 'Primer plano Katherin' },
   { url: foto3, alt: 'Vestido de 15 años' },
 ];
 
@@ -31,18 +32,19 @@ const phoneNumber = "573115479052"
 ---
 
 <Layout>
-	<Hero name='Valery García' date='28/02/2026' image={fotoQuince} />
+	<Hero name='Katherin Parales' date='13/06/2026' image={fotoQuince} />
   <WelcomeMessage />
-  <Countdown image={fotoQuince2} targetDate="2026-02-28T19:00:00" />
+  <InvitacionFamilia />
+  <Countdown image={foto3} targetDate="2026-06-13T19:00:00" />
   <Location />
   <DressCode />
   <RSVP phoneNumber={phoneNumber} googleSheetUrl={urlSheet} />
-  <LluviaSobres 
+  <!-- <LluviaSobres 
     nequi="300 123 4567" 
     cuentaBancaria="123-456789-01" 
     banco="Bancolombia"
-  />
-  <Hashtag tag="#Mis15ConValery" />
+  /> -->
+  <Hashtag tag="#Mis15ConKatherin" />
   <Gallery images={misFotos} />
   <Footer />
 </Layout>

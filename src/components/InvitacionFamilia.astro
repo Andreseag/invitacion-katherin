@@ -1,0 +1,67 @@
+---
+// Este componente usa las clases de Tailwind y la animación por IntersectionObserver que proporcionaste.
+---
+
+<section id="family-section" class="bg-brand-light py-24 px-6 opacity-0 translate-y-10 transition-all duration-[1200ms] ease-out">
+  <div class="max-w-3xl mx-auto text-center">
+    
+    <!-- Divisor decorativo superior (Estilo que proporcionaste) -->
+    <div class="mb-8 flex justify-center items-center gap-4 text-brand">
+      <span class="h-[1px] w-10 bg-brand/30"></span>
+      <span class="text-xl">✦</span>
+      <span class="h-[1px] w-10 bg-brand/30"></span>
+    </div>
+
+    <!-- Título principal con la fuente Script de la marca -->
+    <h2 class="font-script text-brand-dark text-5xl md:text-6xl mb-8">
+      La Familia Parales Ortiz,
+    </h2>
+
+    <!-- Contenedor del texto con espaciado uniforme -->
+    <div class="space-y-8">
+      
+      <!-- Párrafo principal de la invitación (Estilo Serif Italic) -->
+      <p class="font-serif text-brand-dark/80 text-lg md:text-xl leading-relaxed italic">
+        Con inmensa gratitud a Dios y con todo el amor de nuestros corazones, tenemos el honor de invitarlos a celebrar los quince años de nuestra amada hija. Su compañía será una bendición y una gran alegría para nuestra Niña en este día tan especial.
+      </p>
+
+      <!-- Divisor sutil intermedio entre la invitación y el versículo -->
+      <div class="flex justify-center my-8">
+        <div class="h-[1px] w-48 bg-brand/30"></div>
+      </div>
+
+      <!-- El Versículo Bíblico (Estilo Serif, énfasis en texto más grande) -->
+      <p class="font-serif text-brand-dark/80 text-xl md:text-2xl leading-relaxed">
+        "Porque yo sé los planes que tengo para ti, afirma el Señor, planes de bienestar y no de mal, para darte un futuro y una esperanza."
+      </p>
+      
+      <!-- La Referencia Bíblica (Estilo Sans-serif, Bold, Uppercase) -->
+      <p class="font-sans text-brand-dark text-base font-bold uppercase tracking-wide">
+        Jeremías 29:11
+      </p>
+    </div>
+
+    <!-- Divisor decorativo inferior (Estilo que proporcionaste) -->
+    <div class="mt-12 flex justify-center">
+        <div class="h-[1px] w-24 bg-brand/30"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Script autónomo para que la animación funcione al hacer scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Cuando entra en pantalla, quitamos las clases de estado inicial
+        entry.target.classList.remove('opacity-0', 'translate-y-10');
+        // Y añadimos las clases para la animación final
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  // Seleccionamos la sección por su ID único
+  const section = document.getElementById('family-section');
+  if (section) observer.observe(section);
+</script>

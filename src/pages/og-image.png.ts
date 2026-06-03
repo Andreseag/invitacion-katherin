@@ -94,7 +94,7 @@ export async function GET() {
                       marginBottom: 5,
                       fontFamily: "Playfair Display",
                     },
-                    children: "Valery García",
+                    children: "Katherin Parales",
                   },
                 },
                 {
@@ -119,7 +119,7 @@ export async function GET() {
                       fontFamily: "Montserrat",
                       fontWeight: "bold",
                     },
-                    children: "#Mis15ConValery",
+                    children: "#Mis15ConKatherin",
                   },
                 },
               ],

@@ -8,13 +8,13 @@ interface Props {
 }
 
 const { 
-  title = "Mis 15 Años - Valery García", 
+  title = "Mis 15 Años - Katherin Parales", 
   description = "Acompáñame a celebrar una noche mágica e inolvidable. ¡Estás invitado!",
   image = "/image-1.jpg" // Asegúrate de tener una foto en public/og-image.jpg
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = new URL('/og-image.png', Astro.url.origin).href;
+const ogImageURL = new URL('/og-image.png', Astro.url.origin).href; 
 ---
 
 <!doctype html>

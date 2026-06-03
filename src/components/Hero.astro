@@ -10,7 +10,7 @@ const { name, date, image } = Astro.props;
 const imageSrc = typeof image === 'string' ? image : image.src;
 ---
 
-<section class="relative h-[90vh] flex flex-col justify-between py-16 overflow-hidden bg-brand-light">
+<section class="relative h-[90vh] flex flex-col justify-end py-16 overflow-hidden bg-brand-light">
   <img 
     src={imageSrc}
     alt={`Foto de ${name}`}
@@ -20,13 +20,13 @@ const imageSrc = typeof image === 'string' ? image : image.src;
   <div class="absolute inset-0 bg-gradient-to-b from-brand/20 via-transparent to-brand-light z-10"></div>
   
   <div class="relative z-20 text-center px-4">
-    <h1 class="font-script text-brand-dark text-[85px] md:text-9xl lg:text-[10rem] leading-tight drop-shadow-sm">
+    <h1 class="font-script text-brand-light text-[85px] md:text-9xl lg:text-[10rem] leading-tight drop-shadow-sm">
       <!-- {name} -->
-       Valery
+      Katherin
     </h1>
-     <h1 class="font-script text-brand-dark text-[85px] md:text-9xl lg:text-[10rem] leading-tight drop-shadow-sm">
+     <h1 class="font-script text-brand-light text-[85px] md:text-9xl lg:text-[10rem] leading-tight drop-shadow-sm">
       <!-- {name} -->
-       García
+       Parales
     </h1>
   </div>
 
@@ -53,7 +53,7 @@ const imageSrc = typeof image === 'string' ? image : image.src;
     </div>
 
     <p class="font-sans text-brand-dark/70 text-sm md:text-base tracking-[0.2em] uppercase">
-      Arauquita, Colombia
+      Arauquita, Arauca 
     </p>
   </div>
 </section>
