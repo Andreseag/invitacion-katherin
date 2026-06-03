@@ -10,7 +10,7 @@ interface Props {
 const { 
   title = "Mis 15 Años - Katherin Parales", 
   description = "Acompáñame a celebrar una noche mágica e inolvidable. ¡Estás invitado!",
-  image = "/og-image.jpg" // Asegúrate de tener una foto en public/og-image.jpg
+  image = "/image-1.jpg" // Asegúrate de tener una foto en public/og-image.jpg
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -34,23 +34,19 @@ const ogImageURL = new URL('/og-image.png', Astro.site).href;
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
-    <meta property="og:image:secure_url" content={ogImageURL} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} /> 
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImageURL} />
+
+    <meta name="theme-color" content="#FFD1DC" />
   </head>
   <body class="bg-brand-light">
     <slot />
