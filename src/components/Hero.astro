@@ -65,16 +65,17 @@ const imageSrc = typeof image === 'string' ? image : image.src;
 
 <script>
   const scrollBtn = document.getElementById('scroll-to-content');
+  const heroSection = document.getElementById('hero-section');
   
-  if (scrollBtn) {
+  if (scrollBtn && heroSection) {
     scrollBtn.addEventListener('click', () => {
-      const heroSection = document.getElementById('hero-section');
-      // Busca el siguiente elemento hermano en el DOM para escrollear hacia él
-      const nextSection = heroSection?.nextElementSibling;
+      // Calculamos la posición del borde inferior del Hero
+      const scrollTarget = heroSection.offsetTop + heroSection.offsetHeight;
       
-      if (nextSection) {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-      }
+      window.scrollTo({
+        top: scrollTarget,
+        behavior: 'smooth'
+      });
     });
   }
 </script>
